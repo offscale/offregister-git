@@ -12,4 +12,5 @@ def push0(**kwargs):
     apt_depends('git')
 
     clone_or_update(repo=kwargs['GIT_REPO'], to_dir=kwargs['GIT_DIR'], use_sudo=kwargs.get('use_sudo', False),
-                    branch=kwargs.get('GIT_BRANCH', 'master'), skip_reset=kwargs.get('skip_reset', False))
+                    branch=kwargs.get('GIT_BRANCH', 'master'), skip_reset=kwargs.get('skip_reset', False),
+                    reset_to_first=kwargs.get('GIT_RESET_TO_FIRST', False))
