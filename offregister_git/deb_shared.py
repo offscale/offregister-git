@@ -1,3 +1,7 @@
+"""
+Shared debian/ubuntu mod
+"""
+
 from sys import modules
 
 from offregister_fab_utils.apt import apt_depends
@@ -8,10 +12,11 @@ from offregister_git import get_logger
 logger = get_logger(modules[__name__].__name__)
 
 
-def push0(**kwargs):
-    apt_depends("git")
+def push0(c, **kwargs):
+    apt_depends(c, "git")
 
     clone_or_update(
+        c,
         repo=kwargs["GIT_REPO"],
         to_dir=kwargs["GIT_DIR"],
         use_sudo=kwargs.get("use_sudo", False),
