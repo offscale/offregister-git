@@ -24,4 +24,5 @@ def push0(c, **kwargs):
         skip_reset=kwargs.get("skip_reset", False),
         skip_clean=kwargs.get("skip_clean", True),
         reset_to_first=kwargs.get("GIT_RESET_TO_FIRST", False),
+        git_env=kwargs.get("GIT_ENV"),
     )
