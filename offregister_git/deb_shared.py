@@ -26,3 +26,6 @@ def push0(c, **kwargs):
         reset_to_first=kwargs.get("GIT_RESET_TO_FIRST", False),
         git_env=kwargs.get("GIT_ENV"),
     )
+
+
+__all__ = ["push0"]
